@@ -30,7 +30,7 @@ const matches = (path, list) =>
 // Middleware
 // --------------------------------------------------
 
-export async function middleware(req) {
+export async function proxy(req) {
   const { pathname } = req.nextUrl;
   const isApi = pathname.startsWith("/api");
   const isGuestOnly = matches(pathname, GUEST_ONLY);
